@@ -1,3 +1,0 @@
-"0","correlation::correlation(raq_items_tib) |> "
-"0","  summary() |> "
-"0","  knitr::kable(digits = 2)"
