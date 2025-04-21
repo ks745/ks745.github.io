@@ -1,0 +1,31 @@
+---
+title: "R Guide"
+---
+
+Welcome to my Guide to R website
+
+There are pages on Analysing Data:
+
+-   [Summary Tables](https://ks745.quarto.pub/guide/posts/summary_tables.html)
+
+-   [Plots](https://ks745.quarto.pub/guide/posts/plots.html)
+
+-   [Diagnostic Plots and Outliers](https://ks745.quarto.pub/guide/posts/diagnostic_info.html)
+
+-   [Linear Model](https://ks745.quarto.pub/guide/posts/lm.html)
+
+-   [Contrast Coding](https://ks745.quarto.pub/guide/posts/contrast_coding.html)
+
+-   [Exploratory Factor Analysis](https://ks745.quarto.pub/guide/posts/efa.html)
+
+There are also pages on how to build cool stuff, like blogs and websites:
+
+-   [Creating a Blog](https://ks745.quarto.pub/guide/posts/blog.html)
+
+-   [Creating a Website](https://ks745.quarto.pub/guide/posts/website.html)
+
+-   [Themes and Icons](https://ks745.quarto.pub/guide/posts/themes.html)
+
+-   [Publishing](https://ks745.quarto.pub/guide/posts/publishing.html)
+
+Enjoy! :)

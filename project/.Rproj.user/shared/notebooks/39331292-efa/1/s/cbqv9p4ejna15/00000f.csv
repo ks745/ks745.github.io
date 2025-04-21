@@ -1,0 +1,16 @@
+"0","# eg for fear of computers subsclale "
+"0","raq_tib |> "
+"0","  dplyr::select(raq_05, raq_06, raq_07, raq_10, raq_13, raq_14, raq_15, raq_18) |> "
+"0","  psych::alpha()"
+"1","
+Reliability analysis "
+"1"," "
+"1"," 
+"
+"1","Call: "
+"1","psych::alpha(x = dplyr::select(raq_tib, raq_05, raq_06, raq_07, 
+"
+"1","    raq_10, raq_13, raq_14, raq_15, raq_18))
+"
+"1","
+ "

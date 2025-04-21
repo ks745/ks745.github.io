@@ -1,0 +1,44 @@
+{
+  "about.qmd": {
+    "about.html": "0ddd9a0b"
+  },
+  "index.qmd": {
+    "index.html": "f68b749a"
+  },
+  "posts/plots.qmd": {
+    "plots.html": "8ef66fbc"
+  },
+  "posts/visualising_data.qmd": {
+    "visualising_data.html": "b4b1164d"
+  },
+  "posts/efa.qmd": {
+    "efa.html": "fe5fab82"
+  },
+  "posts/summary_tables.qmd": {
+    "summary_tables.html": "7c809aac"
+  },
+  "posts/blog.qmd": {
+    "blog.html": "11f5866d"
+  },
+  "posts/analysing_data.qmd": {
+    "analysing_data.html": "b7ba94e6"
+  },
+  "posts/diagnostic_info.qmd": {
+    "diagnostic_info.html": "11a4d99f"
+  },
+  "posts/lm.qmd": {
+    "lm.html": "d55645f6"
+  },
+  "posts/contrast_coding.qmd": {
+    "contrast_coding.html": "b3025f1f"
+  },
+  "posts/website.qmd": {
+    "website.html": "01e75cbf"
+  },
+  "posts/themes.qmd": {
+    "themes.html": "9154c540"
+  },
+  "posts/publishing.qmd": {
+    "publishing.html": "e2edf422"
+  }
+}

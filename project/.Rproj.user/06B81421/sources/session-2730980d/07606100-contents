@@ -1,0 +1,79 @@
+---
+title: "Diagnostic plots and outliers"
+format: 
+  html: 
+    highlight-style: dracula
+---
+
+```{r}
+library(tidyverse)
+#read in the data
+star <- readr::read_csv("https://drmankin.github.io/disc_stats/star.csv")
+```
+
+```{r}
+read_full_lm <- lm(read1 ~ readk + mathk,
+                   data = star)
+```
+
+## Diagnostic plots
+
+```{r}
+plot(read_full_lm, which = 1:6)
+```
+
+### Pretty residual plots
+
+```{r}
+library("ggfortify")
+ggplot2::autoplot(read_full_lm, 
+                  which = 1:4,
+                  colour = "darkcyan", 
+                  smooth.colour = "purple", 
+                  alpha = .3, 
+                  size = .5) +
+  theme_bw()
+```
+
+## Influential cases and outliers
+
+```{r}
+#augment gets the residuals
+#rowid_to_column gets the case number and creates a column (we've decided to call it case_no)
+#so we get a tibble of diagnostic stats and the case number for each
+
+read_full_res <- read_full_lm |> 
+  broom::augment() |> 
+  tibble::rowid_to_column(var = "case_no") 
+
+
+#we then use this tibble
+#filter to get the rows with absolute value of standard residual >= 1.96 (95% of data)
+#selected the columns we are interested in: case number, standard residual, and residual
+#arranged it by standard residual - smallest first 
+read_full_res |> 
+  dplyr::filter(abs(.std.resid) >= 1.96) |>
+  dplyr::select(case_no, .std.resid, .resid) |> 
+  dplyr::arrange(.std.resid)
+
+
+read_full_res |> 
+  dplyr::filter(abs(.std.resid) >= 2.5) |>
+  dplyr::select(case_no, .std.resid, .resid) |> 
+  dplyr::arrange(.std.resid)
+
+
+read_full_res |> 
+  dplyr::filter(abs(.std.resid) >= 3) |>
+  dplyr::select(case_no, .std.resid, .resid) |> 
+  dplyr::arrange(.std.resid)
+
+
+#using tibble of diagnostic info
+#arranging tibble by descending cooks value 
+#selecting only case number and cooks value
+#to see if any are bigger than 1 
+read_full_res |> 
+  dplyr::arrange(desc(.cooksd)) |>
+  dplyr::select(case_no, .cooksd)
+```

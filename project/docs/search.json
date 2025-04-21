@@ -1,0 +1,434 @@
+[
+  {
+    "objectID": "posts/analysing_data.html",
+    "href": "posts/analysing_data.html",
+    "title": "Analysing Data",
+    "section": "",
+    "text": "hello"
+  },
+  {
+    "objectID": "posts/visualising_data.html",
+    "href": "posts/visualising_data.html",
+    "title": "Visualising Data",
+    "section": "",
+    "text": "hello"
+  },
+  {
+    "objectID": "posts/blog.html",
+    "href": "posts/blog.html",
+    "title": "Creating a blog",
+    "section": "",
+    "text": "words code words",
+    "crumbs": [
+      "Creating a blog"
+    ]
+  },
+  {
+    "objectID": "posts/blog.html#editing-the-_quarto.yml",
+    "href": "posts/blog.html#editing-the-_quarto.yml",
+    "title": "Creating a blog",
+    "section": "Editing the _quarto.yml",
+    "text": "Editing the _quarto.yml\nExample _quarto.yml:\nproject:\n  type: website\n  output-dir: docs\n\nwebsite:\n  title: \"R guide\"\n  navbar:\n    right:\n      - about.qmd\n      - text: \"Posts\"\n        menu: \n          - text: \"How to build a blog\"\n            href: posts/blog.qmd\n    left: \n      - icon: star\n        text: \"QQM\"\n        href: https://ks745.quarto.pub/qqm/\n      - icon: moon\n        text: \"Discovering Statistics\"\n        href: https://ks745.quarto.pub/discovering-statistics/\n\nformat:\n  html:\n    theme: \n      light: custom.scss\n      dark: cyborg\n    highlight-style: dracula",
+    "crumbs": [
+      "Creating a blog"
+    ]
+  },
+  {
+    "objectID": "posts/themes.html",
+    "href": "posts/themes.html",
+    "title": "Themes and Icons",
+    "section": "",
+    "text": "here",
+    "crumbs": [
+      "Creating a blog",
+      "Themes and Icons"
+    ]
+  },
+  {
+    "objectID": "posts/themes.html#navbar-icons",
+    "href": "posts/themes.html#navbar-icons",
+    "title": "Themes and Icons",
+    "section": "",
+    "text": "Find out what icons you can choose from to use in the navbar here",
+    "crumbs": [
+      "Creating a blog",
+      "Themes and Icons"
+    ]
+  },
+  {
+    "objectID": "posts/themes.html#themes",
+    "href": "posts/themes.html#themes",
+    "title": "Themes and Icons",
+    "section": "Themes",
+    "text": "Themes\n\nYou can either use one of the bootstrap themes, or make a custom.scss\nFind the bootstrap themes here\nYou can have a dark and a light theme by putting this in the _quarto.yml:\n\nformat:\n  html:\n    theme: \n      light: minty\n      dark: cyborg\n\nCustom.scss\nTo create a custom.scss file, create a new text file and name it custom.scss\n\nUseful SASS variables\n\n\n\n\n\n\n\n\nVariable name\nWhat it does\nExample\n\n\n\n\n$body-bg\nPage background colour\n$body-bg: #eac891;\n\n\n$body-color\nPage text colour\n$body-color: black;\n\n\n$link-color\nLink colour\n$link-color: #3B7A57;\n\n\n$font-family-sans-serif\nText font for the page\n$font-family-sans-serif: Cardo;\n\n\n$font-size-root\nFont size\n$font-size-root: 0.9am;\n\n\n$h1-font-size\n$h2-font-size\n$h3-font-size\n$h4-font-size\n$h5-font-size\nFont sizes for headers\n$h1-font-size: 2am;\n\n\n$code-bg:\nInline code background (like the code in the variable name column)\n$code-bg: #3B7A57;\n\n\n$code-color\nInline code colour\n$code-color: white;\n\n\n$navbar-bg\nNavbar (top of page) background colour\n$navbar-bg: #ae431e;\n\n\n$navbar-fg\nNavbar foreground (text and icons in navbar) colour\n$navbar-fg: white;\n\n\n$navbar-hl\nHighlight colour for links in navbar\n$navbar-hl: black;\n\n\n$sidebar-bg\nSidebar background\n$sidebar-bg: #d06224;\n\n\n$sidebar-fg\nSidebar foreground\n$sidebar-fg: white;\n\n\n$sidebar-hl\nSidebar highlight\n$sidebar-hl: black;\n\n\n\nHere is a list of all the useful SASS variables you might need\nLook at the scss files for bootswatch themes here\nHere are two useful videos on how to style Quarto docs without knowing CSS or HTML:\n\nVideo 1\nVideo 2 - this video explains how to inspect your rendered document and edit the HTML code to make your document look exactly how you want it to\n\n\n\nExample custom.scss doc:\n/*-- scss:defaults --*/\n@import url('https://fonts.googleapis.com/css?family=Roboto|Bebas+Neue|Kanit|Anton|Acme|Merriweather');\n\n// colours\n$green-1: #cad2c5;\n$green-2: #84a98c;\n$green-3: #52796f;\n$green-4: #354f52;\n$green-5: #2f3e46;\n\n\n\n// body colours\n$body-bg: white;\n$body-color: black;\n$link-color: $green-3; \n\n// fonts\n$font-family-sans-serif: \"Roboto\", \"Open Sans\", \"Cambria\", \"Georgia\", \"serif\";\n\n// inline code colours\n$code-bg: $green-3;\n$code-color: white;\n\n// navbar \n$navbar-bg: $green-2;\n$navbar-fg: white;\n$navbar-hl: black; \n\n// sidebar\n$sidebar-bg: $green-3;\n\n\n\n/*-- scss:rules --*/\n\n\nh1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {\n    color: #52796f;\n    font-family: \"Merriweather\";\n}\n\n\n\nUsing custom.scss in your _quarto.yml\nformat:\n  html:\n    theme:\n       light: custom.scss\n       dark: dark.scss",
+    "crumbs": [
+      "Creating a blog",
+      "Themes and Icons"
+    ]
+  },
+  {
+    "objectID": "posts/publishing.html",
+    "href": "posts/publishing.html",
+    "title": "Publishing",
+    "section": "",
+    "text": "To make the blog or website into an actual website, use quarto publish (you will need to create an account)\n\nIn the terminal, type quarto publish quarto-pub\nIt will then ask you to authorise your account, and pick a site name\nThe URL will be https://your_account_name.quarto.pub/site_name\nexample: https://ks745.quarto.pub/r-guide",
+    "crumbs": [
+      "Creating a blog",
+      "Publishing"
+    ]
+  },
+  {
+    "objectID": "posts/efa.html",
+    "href": "posts/efa.html",
+    "title": "Exploratory Factor Analysis",
+    "section": "",
+    "text": "library(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.4     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(GPArotation)\nraq_tib &lt;- here::here(\"data/raq.csv\") |&gt;\n  readr::read_csv()\n\nRows: 2571 Columns: 24\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr  (1): id\ndbl (23): raq_01, raq_02, raq_03, raq_04, raq_05, raq_06, raq_07, raq_08, ra...\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\n#creating object with only raq items (without id number)\nraq_items_tib &lt;- raq_tib |&gt; \n  dplyr::select(-id)\nraq_items_tib\n\n# A tibble: 2,571 × 23\n   raq_01 raq_02 raq_03 raq_04 raq_05 raq_06 raq_07 raq_08 raq_09 raq_10 raq_11\n    &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;\n 1      3      1      3      4      2      4      3      3      3      2      2\n 2      2      5      3      3      4      4      5      4      4      3      4\n 3      4      5      3      3      3      4      5      4      3      4      4\n 4      4      4      4      3      4      4      4      3      2      2      2\n 5      4      2      5      4      2      3      2      5      4      5      4\n 6      2      3      4      3      4      2      3      2      3      2      1\n 7      2      4      5      5      3      3      4      3      3      3      3\n 8      4      3      4      3      5      4      5      4      3      5      3\n 9      3      5      5      1      3      4      4      3      5      3      3\n10      2      5      3      2      4      5      5      5      4      4      4\n# ℹ 2,561 more rows\n# ℹ 12 more variables: raq_12 &lt;dbl&gt;, raq_13 &lt;dbl&gt;, raq_14 &lt;dbl&gt;, raq_15 &lt;dbl&gt;,\n#   raq_16 &lt;dbl&gt;, raq_17 &lt;dbl&gt;, raq_18 &lt;dbl&gt;, raq_19 &lt;dbl&gt;, raq_20 &lt;dbl&gt;,\n#   raq_21 &lt;dbl&gt;, raq_22 &lt;dbl&gt;, raq_23 &lt;dbl&gt;",
+    "crumbs": [
+      "Analysing Data",
+      "Exploratory Factor Analysis"
+    ]
+  },
+  {
+    "objectID": "posts/efa.html#correlations",
+    "href": "posts/efa.html#correlations",
+    "title": "Exploratory Factor Analysis",
+    "section": "Correlations",
+    "text": "Correlations\n\nCorrelations using Pearson’s R\n\ncorrelation::correlation(raq_items_tib) |&gt; \n  summary() |&gt; \n  knitr::kable(digits = 2)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nParameter\nraq_23\nraq_22\nraq_21\nraq_20\nraq_19\nraq_18\nraq_17\nraq_16\nraq_15\nraq_14\nraq_13\nraq_12\nraq_11\nraq_10\nraq_09\nraq_08\nraq_07\nraq_06\nraq_05\nraq_04\nraq_03\nraq_02\n\n\n\n\nraq_01\n0.08\n0.12\n0.23\n0.21\n0.11\n0.12\n0.17\n0.18\n0.11\n0.12\n0.11\n0.15\n0.19\n0.11\n0.08\n0.22\n0.11\n0.16\n0.22\n0.22\n-0.18\n0.11\n\n\nraq_02\n0.39\n0.34\n0.16\n0.13\n0.39\n0.26\n0.17\n0.10\n0.19\n0.20\n0.23\n0.09\n0.15\n0.18\n0.39\n0.18\n0.26\n0.34\n0.28\n0.12\n-0.12\nNA\n\n\nraq_03\n-0.05\n-0.12\n-0.26\n-0.23\n-0.12\n-0.15\n-0.18\n-0.20\n-0.15\n-0.09\n-0.13\n-0.15\n-0.19\n-0.10\n-0.08\n-0.22\n-0.13\n-0.17\n-0.25\n-0.19\nNA\nNA\n\n\nraq_04\n0.08\n0.16\n0.32\n0.28\n0.14\n0.17\n0.24\n0.27\n0.18\n0.15\n0.16\n0.20\n0.22\n0.18\n0.10\n0.25\n0.17\n0.23\n0.32\nNA\nNA\nNA\n\n\nraq_05\n0.17\n0.27\n0.37\n0.34\n0.29\n0.38\n0.30\n0.24\n0.33\n0.27\n0.35\n0.19\n0.31\n0.31\n0.16\n0.36\n0.36\n0.51\nNA\nNA\nNA\nNA\n\n\nraq_06\n0.17\n0.33\n0.26\n0.23\n0.38\n0.51\n0.28\n0.16\n0.40\n0.36\n0.46\n0.11\n0.29\n0.40\n0.20\n0.34\n0.45\nNA\nNA\nNA\nNA\nNA\n\n\nraq_07\n0.16\n0.22\n0.20\n0.14\n0.26\n0.35\n0.21\n0.12\n0.29\n0.25\n0.31\n0.10\n0.21\n0.28\n0.17\n0.25\nNA\nNA\nNA\nNA\nNA\nNA\n\n\nraq_08\n0.14\n0.22\n0.30\n0.26\n0.21\n0.28\n0.55\n0.21\n0.23\n0.23\n0.20\n0.13\n0.58\n0.19\n0.16\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\nraq_09\n0.55\n0.43\n0.17\n0.10\n0.46\n0.15\n0.14\n0.08\n0.15\n0.12\n0.15\n0.06\n0.17\n0.11\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\nraq_10\n0.07\n0.16\n0.16\n0.18\n0.21\n0.29\n0.18\n0.13\n0.24\n0.22\n0.25\n0.08\n0.17\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\nraq_11\n0.13\n0.20\n0.29\n0.27\n0.19\n0.24\n0.47\n0.17\n0.20\n0.19\n0.20\n0.10\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\nraq_12\n0.05\n0.08\n0.16\n0.12\n0.07\n0.10\n0.07\n0.15\n0.07\n0.07\n0.07\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\nraq_13\n0.14\n0.23\n0.17\n0.16\n0.26\n0.34\n0.18\n0.15\n0.29\n0.27\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\nraq_14\n0.13\n0.22\n0.17\n0.15\n0.22\n0.26\n0.17\n0.08\n0.23\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\nraq_15\n0.15\n0.24\n0.17\n0.16\n0.23\n0.32\n0.21\n0.11\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\nraq_16\n0.10\n0.11\n0.26\n0.23\n0.14\n0.12\n0.18\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\nraq_17\n0.14\n0.21\n0.26\n0.22\n0.20\n0.25\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\nraq_18\n0.13\n0.27\n0.19\n0.18\n0.30\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\nraq_19\n0.44\n0.42\n0.18\n0.16\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\nraq_20\n0.11\n0.17\n0.35\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\nraq_21\n0.14\n0.18\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\nraq_22\n0.40\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\nNA\n\n\n\n\n\n\n\nCorrelations using Spearman’s Rho\nRecommended\n\nraq_poly &lt;- psych::polychoric(raq_items_tib)\nraq_cor &lt;- raq_poly$rho\nraq_cor |&gt; \n  knitr::kable(digits = 2)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nraq_01\nraq_02\nraq_03\nraq_04\nraq_05\nraq_06\nraq_07\nraq_08\nraq_09\nraq_10\nraq_11\nraq_12\nraq_13\nraq_14\nraq_15\nraq_16\nraq_17\nraq_18\nraq_19\nraq_20\nraq_21\nraq_22\nraq_23\n\n\n\n\nraq_01\n1.00\n0.12\n-0.20\n0.24\n0.25\n0.18\n0.12\n0.25\n0.09\n0.12\n0.21\n0.17\n0.12\n0.13\n0.12\n0.19\n0.18\n0.13\n0.12\n0.23\n0.25\n0.14\n0.09\n\n\nraq_02\n0.12\n1.00\n-0.13\n0.14\n0.31\n0.37\n0.28\n0.20\n0.43\n0.20\n0.17\n0.10\n0.25\n0.22\n0.21\n0.11\n0.19\n0.29\n0.43\n0.14\n0.18\n0.38\n0.43\n\n\nraq_03\n-0.20\n-0.13\n1.00\n-0.22\n-0.28\n-0.18\n-0.14\n-0.24\n-0.09\n-0.11\n-0.21\n-0.16\n-0.14\n-0.10\n-0.17\n-0.22\n-0.19\n-0.17\n-0.13\n-0.26\n-0.29\n-0.13\n-0.06\n\n\nraq_04\n0.24\n0.14\n-0.22\n1.00\n0.35\n0.26\n0.18\n0.28\n0.11\n0.20\n0.25\n0.21\n0.18\n0.16\n0.21\n0.30\n0.26\n0.19\n0.16\n0.32\n0.36\n0.17\n0.09\n\n\nraq_05\n0.25\n0.31\n-0.28\n0.35\n1.00\n0.57\n0.40\n0.40\n0.18\n0.35\n0.35\n0.21\n0.39\n0.30\n0.36\n0.27\n0.33\n0.42\n0.32\n0.38\n0.41\n0.30\n0.19\n\n\nraq_06\n0.18\n0.37\n-0.18\n0.26\n0.57\n1.00\n0.50\n0.38\n0.22\n0.44\n0.33\n0.13\n0.50\n0.39\n0.45\n0.18\n0.31\n0.56\n0.42\n0.25\n0.29\n0.36\n0.19\n\n\nraq_07\n0.12\n0.28\n-0.14\n0.18\n0.40\n0.50\n1.00\n0.28\n0.18\n0.31\n0.24\n0.10\n0.34\n0.28\n0.32\n0.13\n0.23\n0.39\n0.28\n0.16\n0.22\n0.25\n0.18\n\n\nraq_08\n0.25\n0.20\n-0.24\n0.28\n0.40\n0.38\n0.28\n1.00\n0.18\n0.20\n0.64\n0.14\n0.22\n0.25\n0.25\n0.23\n0.61\n0.31\n0.23\n0.29\n0.33\n0.25\n0.16\n\n\nraq_09\n0.09\n0.43\n-0.09\n0.11\n0.18\n0.22\n0.18\n0.18\n1.00\n0.12\n0.19\n0.07\n0.17\n0.14\n0.16\n0.09\n0.16\n0.16\n0.51\n0.11\n0.19\n0.48\n0.60\n\n\nraq_10\n0.12\n0.20\n-0.11\n0.20\n0.35\n0.44\n0.31\n0.20\n0.12\n1.00\n0.19\n0.08\n0.27\n0.24\n0.27\n0.14\n0.20\n0.32\n0.23\n0.20\n0.18\n0.17\n0.08\n\n\nraq_11\n0.21\n0.17\n-0.21\n0.25\n0.35\n0.33\n0.24\n0.64\n0.19\n0.19\n1.00\n0.11\n0.22\n0.20\n0.22\n0.19\n0.51\n0.27\n0.21\n0.30\n0.32\n0.22\n0.14\n\n\nraq_12\n0.17\n0.10\n-0.16\n0.21\n0.21\n0.13\n0.10\n0.14\n0.07\n0.08\n0.11\n1.00\n0.08\n0.08\n0.08\n0.17\n0.08\n0.11\n0.08\n0.14\n0.18\n0.09\n0.06\n\n\nraq_13\n0.12\n0.25\n-0.14\n0.18\n0.39\n0.50\n0.34\n0.22\n0.17\n0.27\n0.22\n0.08\n1.00\n0.30\n0.32\n0.17\n0.20\n0.38\n0.29\n0.18\n0.19\n0.26\n0.15\n\n\nraq_14\n0.13\n0.22\n-0.10\n0.16\n0.30\n0.39\n0.28\n0.25\n0.14\n0.24\n0.20\n0.08\n0.30\n1.00\n0.26\n0.09\n0.19\n0.28\n0.24\n0.16\n0.18\n0.25\n0.14\n\n\nraq_15\n0.12\n0.21\n-0.17\n0.21\n0.36\n0.45\n0.32\n0.25\n0.16\n0.27\n0.22\n0.08\n0.32\n0.26\n1.00\n0.12\n0.24\n0.35\n0.26\n0.18\n0.18\n0.26\n0.17\n\n\nraq_16\n0.19\n0.11\n-0.22\n0.30\n0.27\n0.18\n0.13\n0.23\n0.09\n0.14\n0.19\n0.17\n0.17\n0.09\n0.12\n1.00\n0.20\n0.14\n0.15\n0.26\n0.29\n0.12\n0.11\n\n\nraq_17\n0.18\n0.19\n-0.19\n0.26\n0.33\n0.31\n0.23\n0.61\n0.16\n0.20\n0.51\n0.08\n0.20\n0.19\n0.24\n0.20\n1.00\n0.28\n0.22\n0.24\n0.29\n0.23\n0.15\n\n\nraq_18\n0.13\n0.29\n-0.17\n0.19\n0.42\n0.56\n0.39\n0.31\n0.16\n0.32\n0.27\n0.11\n0.38\n0.28\n0.35\n0.14\n0.28\n1.00\n0.33\n0.20\n0.21\n0.30\n0.14\n\n\nraq_19\n0.12\n0.43\n-0.13\n0.16\n0.32\n0.42\n0.28\n0.23\n0.51\n0.23\n0.21\n0.08\n0.29\n0.24\n0.26\n0.15\n0.22\n0.33\n1.00\n0.18\n0.20\n0.46\n0.49\n\n\nraq_20\n0.23\n0.14\n-0.26\n0.32\n0.38\n0.25\n0.16\n0.29\n0.11\n0.20\n0.30\n0.14\n0.18\n0.16\n0.18\n0.26\n0.24\n0.20\n0.18\n1.00\n0.39\n0.19\n0.13\n\n\nraq_21\n0.25\n0.18\n-0.29\n0.36\n0.41\n0.29\n0.22\n0.33\n0.19\n0.18\n0.32\n0.18\n0.19\n0.18\n0.18\n0.29\n0.29\n0.21\n0.20\n0.39\n1.00\n0.20\n0.16\n\n\nraq_22\n0.14\n0.38\n-0.13\n0.17\n0.30\n0.36\n0.25\n0.25\n0.48\n0.17\n0.22\n0.09\n0.26\n0.25\n0.26\n0.12\n0.23\n0.30\n0.46\n0.19\n0.20\n1.00\n0.45\n\n\nraq_23\n0.09\n0.43\n-0.06\n0.09\n0.19\n0.19\n0.18\n0.16\n0.60\n0.08\n0.14\n0.06\n0.15\n0.14\n0.17\n0.11\n0.15\n0.14\n0.49\n0.13\n0.16\n0.45\n1.00\n\n\n\n\n\n\n\nCreating a correlation heat map using cor.plot()\n\npsych::cor.plot(raq_cor, upper = FALSE, cex = .4)",
+    "crumbs": [
+      "Analysing Data",
+      "Exploratory Factor Analysis"
+    ]
+  },
+  {
+    "objectID": "posts/efa.html#bartletts-test-of-sphericity",
+    "href": "posts/efa.html#bartletts-test-of-sphericity",
+    "title": "Exploratory Factor Analysis",
+    "section": "Bartlett’s test of sphericity",
+    "text": "Bartlett’s test of sphericity\n\npsych::cortest.bartlett(raq_cor, n = 2571)\n\n$chisq\n[1] 17387.52\n\n$p.value\n[1] 0\n\n$df\n[1] 253",
+    "crumbs": [
+      "Analysing Data",
+      "Exploratory Factor Analysis"
+    ]
+  },
+  {
+    "objectID": "posts/efa.html#kmo-measure-of-sampling-adequacy",
+    "href": "posts/efa.html#kmo-measure-of-sampling-adequacy",
+    "title": "Exploratory Factor Analysis",
+    "section": "KMO measure of sampling adequacy",
+    "text": "KMO measure of sampling adequacy\n\npsych::KMO(raq_cor)\n\nKaiser-Meyer-Olkin factor adequacy\nCall: psych::KMO(r = raq_cor)\nOverall MSA =  0.92\nMSA for each item = \nraq_01 raq_02 raq_03 raq_04 raq_05 raq_06 raq_07 raq_08 raq_09 raq_10 raq_11 \n  0.95   0.94   0.93   0.93   0.95   0.91   0.96   0.86   0.84   0.95   0.89 \nraq_12 raq_13 raq_14 raq_15 raq_16 raq_17 raq_18 raq_19 raq_20 raq_21 raq_22 \n  0.90   0.95   0.96   0.96   0.92   0.90   0.95   0.93   0.93   0.93   0.94 \nraq_23 \n  0.84",
+    "crumbs": [
+      "Analysing Data",
+      "Exploratory Factor Analysis"
+    ]
+  },
+  {
+    "objectID": "posts/efa.html#parallel-analysis",
+    "href": "posts/efa.html#parallel-analysis",
+    "title": "Exploratory Factor Analysis",
+    "section": "Parallel analysis",
+    "text": "Parallel analysis\n\nn.obs = sample size\nfm = “minres” is default - uses minimum residuals\nfa = “both” is default - shows both factors and components. can change to fa = “fa” to just show number of factors to extract\ncor = “cor” is default - uses pearson’s correlations. can change to cor = “poly” for polychoric correlations\n\n\n#using the raw data\n#psych::fa.parallel(raq_items_tib, fa = \"fa\", cor = \"poly\")\n\n#using the correlation matrix we made earlier (faster)\npsych::fa.parallel(raq_cor, n.obs = 2571, fa = \"fa\")\n\n\n\n\n\n\n\n\nParallel analysis suggests that the number of factors =  4  and the number of components =  NA \n\n\n\nUsing eigenvalues\nCompares our data to a data set with no underlying factors (keep the factors with eigenvalues bigger than red line)\n\n# parallel analysis but with principle components to compute the eigenvalues \n\n# Using the raw data\n#psych::fa.parallel(raq_items_tib, fa = \"pc\", cor = \"poly\")\n\n# Using the correlation matrix (faster)\npsych::fa.parallel(raq_cor, n.obs = 2571, fa = \"pc\")\n\n\n\n\n\n\n\n\nParallel analysis suggests that the number of factors =  NA  and the number of components =  4",
+    "crumbs": [
+      "Analysing Data",
+      "Exploratory Factor Analysis"
+    ]
+  },
+  {
+    "objectID": "posts/efa.html#creating-the-factor-analysis-object-and-inspecting-it",
+    "href": "posts/efa.html#creating-the-factor-analysis-object-and-inspecting-it",
+    "title": "Exploratory Factor Analysis",
+    "section": "Creating the factor analysis object (and inspecting it)",
+    "text": "Creating the factor analysis object (and inspecting it)\nGeneral format\nmy_fa_object &lt;- psych::fa(data_tib, \nnfactors = 1, \nfm = \"minres\", \nrotate = \"oblimin\", \nscores = \"regression\", \nmax.iter = 50, \nuse = \"pairwise\", \ncor = \"cor\"                            \n)\n\nnfactors = how many factors to extract\nrotate = “oblimin”: the method of factor rotation. the default is an oblique rotation method called oblimin\n\nscores = “regression” is default method for computing factor scores - use scores = “tenBerge” for oblique rotation\n\nlibrary(GPArotation)\n\n# using the raw rata \n# raq_fa &lt;- psych::fa(raq_items_tib,\n#                    nfactors = 4,\n#                    scores = \"tenBerge\",\n#                    cor = \"poly\"\n#                    )\n\n# using the correlation matrix \nraq_fa &lt;- psych::fa(raq_cor, \n                    n.obs = 2571, \n                    nfactors = 4,\n                    scores = \"tenBerge\"\n                    )\nraq_fa\n\nFactor Analysis using method =  minres\nCall: psych::fa(r = raq_cor, nfactors = 4, n.obs = 2571, scores = \"tenBerge\")\nStandardized loadings (pattern matrix) based upon correlation matrix\n         MR1   MR2   MR4   MR3   h2   u2 com\nraq_01 -0.03  0.01  0.39  0.06 0.17 0.83 1.1\nraq_02  0.25  0.48  0.02 -0.03 0.38 0.62 1.5\nraq_03  0.00  0.01 -0.43 -0.03 0.20 0.80 1.0\nraq_04  0.03 -0.02  0.56  0.00 0.33 0.67 1.0\nraq_05  0.45 -0.01  0.39  0.02 0.54 0.46 2.0\nraq_06  0.84  0.00 -0.01  0.03 0.73 0.27 1.0\nraq_07  0.56  0.04  0.00  0.04 0.35 0.65 1.0\nraq_08  0.00 -0.01 -0.01  0.88 0.75 0.25 1.0\nraq_09 -0.07  0.81  0.00  0.03 0.62 0.38 1.0\nraq_10  0.49 -0.05  0.09 -0.02 0.26 0.74 1.1\nraq_11 -0.01  0.01  0.03  0.72 0.55 0.45 1.0\nraq_12 -0.01  0.01  0.37 -0.07 0.11 0.89 1.1\nraq_13  0.57  0.03  0.04 -0.03 0.34 0.66 1.0\nraq_14  0.42  0.04  0.01  0.06 0.22 0.78 1.1\nraq_15  0.48  0.03  0.03  0.05 0.29 0.71 1.0\nraq_16 -0.05  0.02  0.51 -0.01 0.23 0.77 1.0\nraq_17  0.03  0.02  0.00  0.68 0.49 0.51 1.0\nraq_18  0.63  0.01 -0.02  0.07 0.43 0.57 1.0\nraq_19  0.26  0.56  0.00 -0.01 0.50 0.50 1.4\nraq_20  0.00  0.01  0.54  0.05 0.32 0.68 1.0\nraq_21 -0.02  0.05  0.59  0.06 0.40 0.60 1.0\nraq_22  0.19  0.52  0.03  0.05 0.41 0.59 1.3\nraq_23 -0.08  0.79  0.02 -0.01 0.59 0.41 1.0\n\n                       MR1  MR2  MR4  MR3\nSS loadings           3.04 2.24 2.03 1.91\nProportion Var        0.13 0.10 0.09 0.08\nCumulative Var        0.13 0.23 0.32 0.40\nProportion Explained  0.33 0.24 0.22 0.21\nCumulative Proportion 0.33 0.57 0.79 1.00\n\n With factor correlations of \n     MR1  MR2  MR4  MR3\nMR1 1.00 0.38 0.50 0.48\nMR2 0.38 1.00 0.28 0.28\nMR4 0.50 0.28 1.00 0.57\nMR3 0.48 0.28 0.57 1.00\n\nMean item complexity =  1.1\nTest of the hypothesis that 4 factors are sufficient.\n\ndf null model =  253  with the objective function =  6.79 with Chi Square =  17387.52\ndf of  the model are 167  and the objective function was  0.1 \n\nThe root mean square of the residuals (RMSR) is  0.01 \nThe df corrected root mean square of the residuals is  0.02 \n\nThe harmonic n.obs is  2571 with the empirical chi square  205.03  with prob &lt;  0.024 \nThe total n.obs was  2571  with Likelihood Chi Square =  267.21  with prob &lt;  1.3e-06 \n\nTucker Lewis Index of factoring reliability =  0.991\nRMSEA index =  0.015  and the 90 % confidence intervals are  0.012 0.019\nBIC =  -1044.08\nFit based upon off diagonal values = 1\nMeasures of factor score adequacy             \n                                                   MR1  MR2  MR4  MR3\nCorrelation of (regression) scores with factors   0.93 0.91 0.88 0.92\nMultiple R square of scores with factors          0.87 0.83 0.77 0.85\nMinimum correlation of possible factor scores     0.73 0.66 0.54 0.70",
+    "crumbs": [
+      "Analysing Data",
+      "Exploratory Factor Analysis"
+    ]
+  },
+  {
+    "objectID": "posts/efa.html#factor-loadings",
+    "href": "posts/efa.html#factor-loadings",
+    "title": "Exploratory Factor Analysis",
+    "section": "Factor loadings",
+    "text": "Factor loadings\n\nthreshold = “max” is default - shows only primary factor loadings, or can change to be threshold = “0.2” (for example), or can change to see all factor loadings threshold = NULL\n\n\n#to make it look nicer: \noptions(knitr.kable.NA = \"\")\n\nparameters::model_parameters(raq_fa,\n                             sort = TRUE, \n                             threshold = \"max\") |&gt; \n  knitr::kable(digits = 2)\n\n\n\n\nVariable\nMR1\nMR2\nMR4\nMR3\nComplexity\nUniqueness\n\n\n\n\nraq_06\n0.84\n\n\n\n1.00\n0.27\n\n\nraq_18\n0.63\n\n\n\n1.03\n0.57\n\n\nraq_13\n0.57\n\n\n\n1.02\n0.66\n\n\nraq_07\n0.56\n\n\n\n1.02\n0.65\n\n\nraq_10\n0.49\n\n\n\n1.08\n0.74\n\n\nraq_15\n0.48\n\n\n\n1.04\n0.71\n\n\nraq_05\n0.45\n\n\n\n1.97\n0.46\n\n\nraq_14\n0.42\n\n\n\n1.06\n0.78\n\n\nraq_09\n\n0.81\n\n\n1.02\n0.38\n\n\nraq_23\n\n0.79\n\n\n1.02\n0.41\n\n\nraq_19\n\n0.56\n\n\n1.41\n0.50\n\n\nraq_22\n\n0.52\n\n\n1.29\n0.59\n\n\nraq_02\n\n0.48\n\n\n1.54\n0.62\n\n\nraq_21\n\n\n0.59\n\n1.04\n0.60\n\n\nraq_04\n\n\n0.56\n\n1.01\n0.67\n\n\nraq_20\n\n\n0.54\n\n1.02\n0.68\n\n\nraq_16\n\n\n0.51\n\n1.02\n0.77\n\n\nraq_03\n\n\n-0.43\n\n1.01\n0.80\n\n\nraq_01\n\n\n0.39\n\n1.06\n0.83\n\n\nraq_12\n\n\n0.37\n\n1.07\n0.89\n\n\nraq_08\n\n\n\n0.88\n1.00\n0.25\n\n\nraq_11\n\n\n\n0.72\n1.00\n0.45\n\n\nraq_17\n\n\n\n0.68\n1.00\n0.51",
+    "crumbs": [
+      "Analysing Data",
+      "Exploratory Factor Analysis"
+    ]
+  },
+  {
+    "objectID": "posts/efa.html#reliability-analysis",
+    "href": "posts/efa.html#reliability-analysis",
+    "title": "Exploratory Factor Analysis",
+    "section": "Reliability analysis",
+    "text": "Reliability analysis\n\nUsing omega()\nif all items are stored in the same direction:\nmy_omg &lt;- psych::omega(my_tibble,\nnfactors = 1,\nfm = \"minres\",\nkey = c(1, 1, -1, 1, 1 … 1),\nrotate = \"oblimin\",\npoly = FALSE   \n)\n\nbecause we use polychoric correlations we need to include poly = TRUE\nkey argument allows us to reverse item scoring - to be quicker, use rep(), which takes the form rep(thing_to_repeat, repetitions)\n\n\n# need to have loaded library(GPArotation)\nraq_omg &lt;- psych::omega(raq_items_tib,\n                        nfactors = 4,\n                        fm = \"minres\",\n                        key = c(1, 1, -1, rep(1, 20)),\n                        poly = TRUE\n                        )\n\n\n\n\n\n\n\nraq_omg\n\nOmega \nCall: omegah(m = m, nfactors = nfactors, fm = fm, key = key, flip = flip, \n    digits = digits, title = title, sl = sl, labels = labels, \n    plot = plot, n.obs = n.obs, rotate = rotate, Phi = Phi, option = option, \n    covar = covar)\nAlpha:                 0.88 \nG.6:                   0.89 \nOmega Hierarchical:    0.68 \nOmega H asymptotic:    0.75 \nOmega Total            0.9 \n\nSchmid Leiman Factor loadings greater than  0.2 \n           g   F1*   F2*   F3*   F4*    h2   h2   u2   p2  com\nraq_01  0.32              0.26             0.17 0.83 0.57 1.99\nraq_02  0.37        0.43              0.38 0.38 0.62 0.37 2.34\nraq_03- 0.34              0.29        0.20 0.20 0.80 0.56 1.97\nraq_04  0.43              0.38        0.33 0.33 0.67 0.56 1.98\nraq_05  0.62  0.32        0.27        0.54 0.54 0.46 0.70 1.90\nraq_06  0.61  0.60                    0.73 0.73 0.27 0.51 2.00\nraq_07  0.44  0.39                    0.35 0.35 0.65 0.54 2.00\nraq_08  0.62                    0.61  0.75 0.75 0.25 0.51 2.00\nraq_09  0.32        0.73              0.62 0.62 0.38 0.17 1.39\nraq_10  0.37  0.35                    0.26 0.26 0.74 0.53 2.07\nraq_11  0.54                    0.50  0.55 0.55 0.45 0.54 1.99\nraq_12  0.22              0.25             0.11 0.89 0.44 2.05\nraq_13  0.42  0.40                    0.34 0.34 0.66 0.51 2.02\nraq_14  0.36  0.30                    0.22 0.22 0.78 0.59 1.98\nraq_15  0.41  0.34                    0.29 0.29 0.71 0.59 1.97\nraq_16  0.34              0.34        0.23 0.23 0.77 0.49 2.02\nraq_17  0.52                    0.47  0.49 0.49 0.51 0.55 1.99\nraq_18  0.48  0.44                    0.43 0.43 0.57 0.54 2.02\nraq_19  0.43        0.51              0.50 0.50 0.50 0.37 2.23\nraq_20  0.43              0.36        0.32 0.32 0.68 0.58 1.95\nraq_21  0.49              0.40        0.40 0.40 0.60 0.59 1.97\nraq_22  0.41        0.46              0.41 0.41 0.59 0.41 2.16\nraq_23  0.30        0.71              0.59 0.59 0.41 0.15 1.35\n\nWith Sums of squares  of:\n   g  F1*  F2*  F3*  F4*   h2 \n4.40 1.39 1.71 0.85 0.86 4.37 \n\ngeneral/max  1.01   max/min =   5.15\nmean percent general =  0.49    with sd =  0.13 and cv of  0.26 \nExplained Common Variance of the general factor =  0.48 \n\nThe degrees of freedom are 167  and the fit is  0.1 \nThe number of observations was  2571  with Chi Square =  267.21  with prob &lt;  1.3e-06\nThe root mean square of the residuals is  0.01 \nThe df corrected root mean square of the residuals is  0.02\nRMSEA index =  0.015  and the 10 % confidence intervals are  0.012 0.019\nBIC =  -1044.08\n\nCompare this with the adequacy of just a general factor and no group factors\nThe degrees of freedom for just the general factor are 230  and the fit is  2.39 \nThe number of observations was  2571  with Chi Square =  6122.42  with prob &lt;  0\nThe root mean square of the residuals is  0.1 \nThe df corrected root mean square of the residuals is  0.11 \n\nRMSEA index =  0.1  and the 10 % confidence intervals are  0.098 0.102\nBIC =  4316.45 \n\nMeasures of factor score adequacy             \n                                                 g  F1*  F2*   F3*  F4*\nCorrelation of scores with factors            0.84 0.76 0.87  0.67 0.74\nMultiple R square of scores with factors      0.71 0.57 0.75  0.44 0.55\nMinimum correlation of factor score estimates 0.42 0.14 0.51 -0.11 0.10\n\n Total, General and Subset omega for each subset\n                                                 g  F1*  F2*  F3*  F4*\nOmega total for total scores and subscales    0.90 0.83 0.80 0.69 0.81\nOmega general for total scores and subscales  0.68 0.48 0.23 0.38 0.43\nOmega group for total scores and subscales    0.18 0.35 0.56 0.31 0.38\n\n\nThe column g shows the loading of each item on the general factor\nColumns F1 to F4 show factor loadings for each item (don’t match main factor analysis because this model includes general factor)\n\n\nCronbach’s alpha\nNot recommended\nPipe the variables for each subscale into the alpha() function from psych\n\n# eg for fear of computers subsclale \nraq_tib |&gt; \n  dplyr::select(raq_05, raq_06, raq_07, raq_10, raq_13, raq_14, raq_15, raq_18) |&gt; \n  psych::alpha()\n\n\nReliability analysis   \nCall: psych::alpha(x = dplyr::select(raq_tib, raq_05, raq_06, raq_07, \n    raq_10, raq_13, raq_14, raq_15, raq_18))\n\n  raw_alpha std.alpha G6(smc) average_r S/N   ase mean   sd median_r\n       0.8       0.8    0.78      0.33   4 0.006  3.5 0.64     0.32\n\n    95% confidence boundaries \n         lower alpha upper\nFeldt     0.79   0.8  0.81\nDuhachek  0.79   0.8  0.81\n\n Reliability if an item is dropped:\n       raw_alpha std.alpha G6(smc) average_r S/N alpha se  var.r med.r\nraq_05      0.77      0.77    0.75      0.32 3.3   0.0069 0.0065  0.29\nraq_06      0.75      0.75    0.72      0.30 2.9   0.0077 0.0021  0.29\nraq_07      0.78      0.78    0.76      0.33 3.5   0.0067 0.0073  0.32\nraq_10      0.79      0.79    0.77      0.35 3.7   0.0064 0.0066  0.34\nraq_13      0.78      0.78    0.76      0.33 3.5   0.0067 0.0073  0.32\nraq_14      0.79      0.79    0.77      0.35 3.8   0.0062 0.0060  0.34\nraq_15      0.78      0.78    0.76      0.34 3.6   0.0065 0.0073  0.34\nraq_18      0.77      0.77    0.75      0.33 3.4   0.0069 0.0065  0.31\n\n Item statistics \n          n raw.r std.r r.cor r.drop mean   sd\nraq_05 2571  0.68  0.68  0.62   0.56  3.5 1.00\nraq_06 2571  0.79  0.79  0.79   0.70  3.5 0.99\nraq_07 2571  0.64  0.64  0.56   0.50  3.5 1.00\nraq_10 2571  0.58  0.58  0.48   0.43  3.5 1.00\nraq_13 2571  0.63  0.63  0.55   0.49  3.5 0.98\nraq_14 2571  0.56  0.55  0.44   0.40  3.5 1.00\nraq_15 2571  0.60  0.60  0.51   0.45  3.5 0.99\nraq_18 2571  0.67  0.67  0.61   0.54  3.5 0.97\n\nNon missing response frequency for each item\n          1    2    3    4    5 miss\nraq_05 0.03 0.13 0.35 0.32 0.16    0\nraq_06 0.02 0.14 0.35 0.33 0.17    0\nraq_07 0.02 0.13 0.33 0.34 0.17    0\nraq_10 0.02 0.14 0.35 0.32 0.17    0\nraq_13 0.02 0.14 0.33 0.35 0.15    0\nraq_14 0.02 0.13 0.33 0.35 0.17    0\nraq_15 0.02 0.13 0.32 0.35 0.17    0\nraq_18 0.02 0.13 0.35 0.35 0.15    0\n\n# fear of peer / social evaluation subscale\nraq_tib |&gt; \n  dplyr::select(raq_02, raq_09, raq_19, raq_22, raq_23) |&gt; \n  psych::alpha()\n\n\nReliability analysis   \nCall: psych::alpha(x = dplyr::select(raq_tib, raq_02, raq_09, raq_19, \n    raq_22, raq_23))\n\n  raw_alpha std.alpha G6(smc) average_r S/N    ase mean   sd median_r\n      0.78      0.78    0.75      0.42 3.6 0.0067  3.5 0.72     0.41\n\n    95% confidence boundaries \n         lower alpha upper\nFeldt     0.77  0.78   0.8\nDuhachek  0.77  0.78   0.8\n\n Reliability if an item is dropped:\n       raw_alpha std.alpha G6(smc) average_r S/N alpha se  var.r med.r\nraq_02      0.77      0.77    0.71      0.45 3.3   0.0075 0.0027  0.43\nraq_09      0.72      0.72    0.67      0.40 2.6   0.0089 0.0011  0.40\nraq_19      0.74      0.74    0.69      0.42 2.8   0.0084 0.0049  0.40\nraq_22      0.76      0.76    0.71      0.44 3.1   0.0078 0.0038  0.42\nraq_23      0.73      0.73    0.67      0.41 2.7   0.0086 0.0018  0.40\n\n Item statistics \n          n raw.r std.r r.cor r.drop mean   sd\nraq_02 2571  0.68  0.69  0.55   0.49  3.5 0.97\nraq_09 2571  0.77  0.77  0.70   0.62  3.5 0.99\nraq_19 2571  0.74  0.74  0.64   0.57  3.5 1.00\nraq_22 2571  0.70  0.71  0.59   0.52  3.5 0.96\nraq_23 2571  0.76  0.76  0.68   0.60  3.5 0.98\n\nNon missing response frequency for each item\n          1    2    3    4    5 miss\nraq_02 0.02 0.13 0.37 0.33 0.15    0\nraq_09 0.02 0.13 0.33 0.34 0.17    0\nraq_19 0.02 0.14 0.34 0.34 0.16    0\nraq_22 0.02 0.13 0.36 0.34 0.15    0\nraq_23 0.02 0.14 0.34 0.34 0.16    0\n\n# for fear of statistics - raq_03 is reverse coded\nraq_tib |&gt; \n  dplyr::select(raq_01, raq_03, raq_04, raq_05, raq_12, raq_16, raq_20, raq_21) |&gt; \n  psych::alpha(keys = c(1, -1, rep(1, 6)))\n\n\nReliability analysis   \nCall: psych::alpha(x = dplyr::select(raq_tib, raq_01, raq_03, raq_04, \n    raq_05, raq_12, raq_16, raq_20, raq_21), keys = c(1, -1, \n    rep(1, 6)))\n\n  raw_alpha std.alpha G6(smc) average_r S/N    ase mean   sd median_r\n      0.71      0.71    0.68      0.23 2.4 0.0087  3.4 0.57     0.22\n\n    95% confidence boundaries \n         lower alpha upper\nFeldt     0.69  0.71  0.72\nDuhachek  0.69  0.71  0.72\n\n Reliability if an item is dropped:\n        raw_alpha std.alpha G6(smc) average_r S/N alpha se  var.r med.r\nraq_01       0.69      0.69    0.67      0.24 2.2   0.0092 0.0050  0.24\nraq_03-      0.69      0.69    0.66      0.24 2.2   0.0094 0.0051  0.23\nraq_04       0.67      0.67    0.64      0.22 2.0   0.0100 0.0046  0.22\nraq_05       0.66      0.66    0.63      0.22 1.9   0.0102 0.0035  0.21\nraq_12       0.71      0.71    0.68      0.26 2.4   0.0088 0.0032  0.24\nraq_16       0.68      0.68    0.66      0.24 2.2   0.0095 0.0051  0.22\nraq_20       0.67      0.67    0.64      0.22 2.0   0.0099 0.0037  0.22\nraq_21       0.66      0.66    0.63      0.22 1.9   0.0103 0.0032  0.21\n\n Item statistics \n           n raw.r std.r r.cor r.drop mean   sd\nraq_01  2571  0.52  0.52  0.39   0.33  3.5 0.99\nraq_03- 2571  0.54  0.54  0.42   0.36  2.5 0.99\nraq_04  2571  0.61  0.61  0.53   0.45  3.5 0.99\nraq_05  2571  0.64  0.64  0.58   0.48  3.5 1.00\nraq_12  2571  0.46  0.46  0.32   0.27  3.5 0.98\nraq_16  2571  0.55  0.55  0.44   0.37  3.5 0.98\nraq_20  2571  0.61  0.60  0.52   0.44  3.5 1.00\nraq_21  2571  0.64  0.65  0.58   0.49  3.5 0.98\n\nNon missing response frequency for each item\n          1    2    3    4    5 miss\nraq_01 0.02 0.14 0.33 0.35 0.16    0\nraq_03 0.02 0.14 0.34 0.34 0.16    0\nraq_04 0.02 0.14 0.34 0.34 0.16    0\nraq_05 0.03 0.13 0.35 0.32 0.16    0\nraq_12 0.02 0.12 0.34 0.35 0.16    0\nraq_16 0.02 0.14 0.34 0.34 0.16    0\nraq_20 0.02 0.14 0.33 0.35 0.17    0\nraq_21 0.02 0.14 0.34 0.35 0.15    0",
+    "crumbs": [
+      "Analysing Data",
+      "Exploratory Factor Analysis"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "R Guide",
+    "section": "",
+    "text": "Welcome to my Guide to R website\nThere are pages on Analysing Data:\n\nSummary Tables\nPlots\nDiagnostic Plots and Outliers\nLinear Model\nContrast Coding\nExploratory Factor Analysis\n\nThere are also pages on how to build cool stuff, like blogs and websites:\n\nCreating a Blog\nCreating a Website\nThemes and Icons\nPublishing\n\nEnjoy! :)"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this site"
+  },
+  {
+    "objectID": "posts/summary_tables.html",
+    "href": "posts/summary_tables.html",
+    "title": "Summary Tables",
+    "section": "",
+    "text": "# reading in the data\n\nstar &lt;- readr::read_csv(\"https://drmankin.github.io/disc_stats/star.csv\") |&gt;\n  dplyr::mutate(dplyr::across(dplyr::starts_with(\"star\"), forcats::as_factor))\n\nRows: 2161 Columns: 48\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr (28): gender, ethnicity, birth, stark, star1, star2, star3, lunchk, lunc...\ndbl (20): readk, read1, read2, read3, mathk, math1, math2, math3, experience...\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\n\n\nlibrary(\"tidyverse\")\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.4     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nstar |&gt; \n  dplyr::group_by(star2) |&gt; \n  dplyr::summarise(\n    n = dplyr::n(),\n    min = min(math2, na.rm = TRUE),\n    max = max(math2, na.rm = TRUE),\n    mean = mean(math2, na.rm = TRUE), \n    median = median(math2, na.rm = TRUE),\n    sd = sd(math2, na.rm = TRUE),\n    CI_lower = mean_cl_normal(math2)$ymin,\n    CI_upper = mean_cl_normal(math2)$ymax\n  ) |&gt; \n  knitr::kable(digits = 3)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nstar2\nn\nmin\nmax\nmean\nmedian\nsd\nCI_lower\nCI_upper\n\n\n\n\nsmall\n813\n488\n721\n597.086\n596\n44.357\n594.033\n600.140\n\n\nregular\n625\n490\n721\n591.486\n587\n42.912\n588.116\n594.857\n\n\nregular+aide\n723\n497\n721\n595.396\n593\n41.852\n592.340\n598.451",
+    "crumbs": [
+      "Analysing Data",
+      "Summary Tables"
+    ]
+  },
+  {
+    "objectID": "posts/summary_tables.html#creating-a-summary-table",
+    "href": "posts/summary_tables.html#creating-a-summary-table",
+    "title": "Summary Tables",
+    "section": "",
+    "text": "# reading in the data\n\nstar &lt;- readr::read_csv(\"https://drmankin.github.io/disc_stats/star.csv\") |&gt;\n  dplyr::mutate(dplyr::across(dplyr::starts_with(\"star\"), forcats::as_factor))\n\nRows: 2161 Columns: 48\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr (28): gender, ethnicity, birth, stark, star1, star2, star3, lunchk, lunc...\ndbl (20): readk, read1, read2, read3, mathk, math1, math2, math3, experience...\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\n\n\nlibrary(\"tidyverse\")\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.4     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nstar |&gt; \n  dplyr::group_by(star2) |&gt; \n  dplyr::summarise(\n    n = dplyr::n(),\n    min = min(math2, na.rm = TRUE),\n    max = max(math2, na.rm = TRUE),\n    mean = mean(math2, na.rm = TRUE), \n    median = median(math2, na.rm = TRUE),\n    sd = sd(math2, na.rm = TRUE),\n    CI_lower = mean_cl_normal(math2)$ymin,\n    CI_upper = mean_cl_normal(math2)$ymax\n  ) |&gt; \n  knitr::kable(digits = 3)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nstar2\nn\nmin\nmax\nmean\nmedian\nsd\nCI_lower\nCI_upper\n\n\n\n\nsmall\n813\n488\n721\n597.086\n596\n44.357\n594.033\n600.140\n\n\nregular\n625\n490\n721\n591.486\n587\n42.912\n588.116\n594.857\n\n\nregular+aide\n723\n497\n721\n595.396\n593\n41.852\n592.340\n598.451",
+    "crumbs": [
+      "Analysing Data",
+      "Summary Tables"
+    ]
+  },
+  {
+    "objectID": "posts/website.html",
+    "href": "posts/website.html",
+    "title": "Creating a website",
+    "section": "",
+    "text": "In the terminal, type quarto create project\nSelect wesbite by using the down arrows and enter\nSet directory as . (to create the website in the ‘project’ folder rather than a subfolder inside that)\nchoose a title\nonce your documents have been created, reload posit cloud to get the ‘build’ button",
+    "crumbs": [
+      "Creating a blog",
+      "Creating a website"
+    ]
+  },
+  {
+    "objectID": "posts/website.html#create-a-new-rstudio-project",
+    "href": "posts/website.html#create-a-new-rstudio-project",
+    "title": "Creating a website",
+    "section": "",
+    "text": "In the terminal, type quarto create project\nSelect wesbite by using the down arrows and enter\nSet directory as . (to create the website in the ‘project’ folder rather than a subfolder inside that)\nchoose a title\nonce your documents have been created, reload posit cloud to get the ‘build’ button",
+    "crumbs": [
+      "Creating a blog",
+      "Creating a website"
+    ]
+  },
+  {
+    "objectID": "posts/website.html#editing-the-_quarto.yml",
+    "href": "posts/website.html#editing-the-_quarto.yml",
+    "title": "Creating a website",
+    "section": "Editing the _quarto.yml",
+    "text": "Editing the _quarto.yml\nExample:\nproject:\n  type: website\n  output-dir: docs\n\nwebsite:\n  title: \"R Guide\"\n  navbar:\n    left:\n      - text: \"Home\"\n        href: index.qmd\n      - text: \"Analysing Data\"\n        href: posts/analysing_data.qmd\n      - text: \"Creating a blog\"\n        href: posts/blog.qmd\n      - text: \"Blogs\"\n        menu: \n          - href: https://ks745.quarto.pub/r-guide/posts/blog.html\n            text: \"R blog\"\n          - href: https://ks745.quarto.pub/qqm/\n            text: \"QQM\"\n          - href: https://ks745.quarto.pub/discovering-statistics/\n            text: \"Discovering Statistics\"\n\n    tools:\n      - icon: cloudy-fill\n        href: https://posit.cloud/content/yours?sort=name_asc\n\n  sidebar:\n    - title: \"Analysing Data\"\n      style: \"docked\"\n      contents:\n        - text: \"Analysing Data\"\n          href: posts/analysing_data.qmd\n        - section: \"Visualising Data\"\n          href: posts/summary_tables.qmd\n          contents:\n            - posts/summary_tables.qmd\n            - posts/plots.qmd\n            - posts/diagnostic_info.qmd\n        - text: \"Linear Model\"\n          href: posts/lm.qmd\n        - text: \"Contrast Coding\"\n          href: posts/contrast_coding.qmd\n        - text: \"Exploratory Factor Analysis\"\n          href: posts/efa.qmd\n    \n    - title: \"Creating a blog\"\n      contents: \n        - posts/blog.qmd\n        - posts/website.qmd\nformat:\n  html:\n    theme:\n       light: minty\n       dark: solar\n    css: styles.css\n    toc: true\nThis website: https://quarto.org/docs/websites/website-navigation.html#side-navigation has lots of ways to customise the _quarto.yml doc to get the website to look how you want",
+    "crumbs": [
+      "Creating a blog",
+      "Creating a website"
+    ]
+  },
+  {
+    "objectID": "posts/contrast_coding.html",
+    "href": "posts/contrast_coding.html",
+    "title": "Contrast Coding",
+    "section": "",
+    "text": "library(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.4     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nstar &lt;- readr::read_csv(\"https://drmankin.github.io/disc_stats/star.csv\")\n\nRows: 2161 Columns: 48\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr (28): gender, ethnicity, birth, stark, star1, star2, star3, lunchk, lunc...\ndbl (20): readk, read1, read2, read3, mathk, math1, math2, math3, experience...\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\nstar &lt;- dplyr::mutate(star, dplyr::across(dplyr::starts_with(\"star\"), forcats::as_factor))",
+    "crumbs": [
+      "Analysing Data",
+      "Contrast Coding"
+    ]
+  },
+  {
+    "objectID": "posts/contrast_coding.html#checking-levels",
+    "href": "posts/contrast_coding.html#checking-levels",
+    "title": "Contrast Coding",
+    "section": "Checking levels",
+    "text": "Checking levels\n\nlevels(star$star2)\n\n[1] \"small\"        \"regular\"      \"regular+aide\"\n\n#if you need to relevel:\n\nstar &lt;- star |&gt; \n  dplyr::mutate(\n    star2 = forcats::fct_relevel(star2, \"small\", \"regular\", \"regular+aide\")\n  )",
+    "crumbs": [
+      "Analysing Data",
+      "Contrast Coding"
+    ]
+  },
+  {
+    "objectID": "posts/contrast_coding.html#contrast-coding",
+    "href": "posts/contrast_coding.html#contrast-coding",
+    "title": "Contrast Coding",
+    "section": "Contrast coding",
+    "text": "Contrast coding\n\n“Regular” class type vs both “small” and “regular with aide”\n“Small” vs “regular with aide”\n\n\nregular_vs_others &lt;- c(-1/3, 2/3, -1/3)\nsmall_vs_aide &lt;- c(1/2, 0, -1/2)\n\ncontrasts(star$star2) &lt;- cbind(regular_vs_others, small_vs_aide)\n\ncontrasts(star$star2)\n\n             regular_vs_others small_vs_aide\nsmall               -0.3333333           0.5\nregular              0.6666667           0.0\nregular+aide        -0.3333333          -0.5\n\n\nfit linear model with contrast coding\n\nstar_lm &lt;- lm(math2 ~ star2, data = star)\n\nanova(star_lm) |&gt; \n  parameters::model_parameters(effectsize_type = \"omega\") |&gt; \n  knitr::kable(digits = 3)\n\n\n\n\nParameter\nSum_Squares\ndf\nMean_Square\nF\np\n\n\n\n\nstar2\n11345.83\n2\n5672.917\n3.052\n0.047\n\n\nResiduals\n4011348.97\n2158\n1858.827\nNA\nNA\n\n\n\n\nbroom::tidy(star_lm, conf.int = TRUE) |&gt; \n  knitr::kable(digits = 3)\n\n\n\n\n\n\n\n\n\n\n\n\n\nterm\nestimate\nstd.error\nstatistic\np.value\nconf.low\nconf.high\n\n\n\n\n(Intercept)\n594.656\n0.933\n637.477\n0.000\n592.827\n596.485\n\n\nstar2regular_vs_others\n-4.754\n2.047\n-2.323\n0.020\n-8.768\n-0.741\n\n\nstar2small_vs_aide\n1.691\n2.204\n0.767\n0.443\n-2.632\n6.013",
+    "crumbs": [
+      "Analysing Data",
+      "Contrast Coding"
+    ]
+  },
+  {
+    "objectID": "posts/plots.html",
+    "href": "posts/plots.html",
+    "title": "Plots",
+    "section": "",
+    "text": "library(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.4     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n#read in the data\ndata &lt;- readr::read_csv(here::here('data/barbenheimr.csv'))\n\nRows: 1000 Columns: 15\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr  (4): ppt_id, sex, employment_status, birth_country\ndbl (11): age, annual_income, iq, ig_followers, twitter_followers, history_c...\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\n#view the codebook\ncodebook &lt;- readr::read_csv(here::here('data/codebook.csv'), show_col_types = F)\n\npupluv_tib &lt;- readr::read_csv(\"https://www.discovr.rocks/csv/puppy_love.csv\") |&gt;\n  dplyr::mutate(\n    dose = forcats::as_factor(dose)\n  )\n\nRows: 30 Columns: 4\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr (2): id, dose\ndbl (2): happiness, puppy_love\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.",
+    "crumbs": [
+      "Analysing Data",
+      "Plots"
+    ]
+  },
+  {
+    "objectID": "posts/plots.html#scatterplots",
+    "href": "posts/plots.html#scatterplots",
+    "title": "Plots",
+    "section": "Scatterplots",
+    "text": "Scatterplots\n\nlibrary(ggplot2)\ndata |&gt; \n  ggplot(aes(x = ig_followers, y = annual_income)) +\n  geom_point(position = \"jitter\", alpha = .4, colour = \"darkcyan\") +\n  scale_x_continuous(limits = c(0,3000),\n                     breaks = seq(0,3000, by = 500),\n                     name = \"Insta followers\") +\n  scale_y_continuous(limits = c(0,125000),\n                     breaks = seq(0,125000, by = 25000),\n                     name = \"Annual income\") +\n  #or for labels could do:\n  #labs(x = \"Insta followers\", y = \"Annual income\")\n  theme_bw()\n\n\n\n\n\n\n\n#another example - using colour\nggplot2::ggplot(pupluv_tib, aes(x = puppy_love, y = happiness, colour = dose, fill = dose)) +\n  geom_point() + \n  geom_smooth(method = \"lm\") +\n  coord_cartesian(ylim = c(0, 10)) +\n  scale_x_continuous(breaks = 0:7) +\n  scale_y_continuous(breaks = 0:10) +\n  labs(x = \"Puppy love (0-7)\", y = \"Happiness (0-10)\", colour = \"Treatment\", fill = \"Treatment\") +\n  theme_minimal()\n\n`geom_smooth()` using formula = 'y ~ x'",
+    "crumbs": [
+      "Analysing Data",
+      "Plots"
+    ]
+  },
+  {
+    "objectID": "posts/plots.html#violin-plots",
+    "href": "posts/plots.html#violin-plots",
+    "title": "Plots",
+    "section": "Violin plots",
+    "text": "Violin plots\n\nggplot2::ggplot(data, aes(employment_status, annual_income)) +\n  geom_violin() +\n  stat_summary(fun.data = \"mean_cl_boot\") +\n  labs(x = \"Employment Status\", y = \"Annual income\") +\n  theme_bw()\n\n\n\n\n\n\n\n#another example - using colour\nggplot2::ggplot(pupluv_tib, aes(x = dose, y = happiness, colour = dose)) +\n  geom_point(position = position_jitter(width = 0.1), alpha = 0.6) +\n  geom_violin(alpha = 0.2) + \n  stat_summary(fun.data = \"mean_cl_normal\", geom = \"pointrange\", position = position_dodge(width = 0.9)) +\n  coord_cartesian(ylim = c(0, 10)) +\n  scale_y_continuous(breaks = 0:10) +\n  labs(x = \"Puppy therapy group\", y = \"Happiness (0-10)\", colour = \"Puppy therapy group\") +\n  theme_bw()",
+    "crumbs": [
+      "Analysing Data",
+      "Plots"
+    ]
+  },
+  {
+    "objectID": "posts/plots.html#ggally---ggscatmat---visualising-data",
+    "href": "posts/plots.html#ggally---ggscatmat---visualising-data",
+    "title": "Plots",
+    "section": "GGally - ggscatmat() - visualising data",
+    "text": "GGally - ggscatmat() - visualising data\n\nGGally::ggscatmat(data, columns = c(\"age\", \"annual_income\", \"barbie_rating\", \"iq\")) +\n  theme_bw()\n\nRegistered S3 method overwritten by 'GGally':\n  method from   \n  +.gg   ggplot2",
+    "crumbs": [
+      "Analysing Data",
+      "Plots"
+    ]
+  },
+  {
+    "objectID": "posts/plots.html#using-cool-colours",
+    "href": "posts/plots.html#using-cool-colours",
+    "title": "Plots",
+    "section": "Using cool colours",
+    "text": "Using cool colours\n\n# install.packages(\"MetBrewer\")\nlibrary(MetBrewer)\n\nggplot(data, aes(x = employment_status, fill = employment_status)) +\n  geom_bar() +\n  labs(x = \"Employment Status\", y = \"Count\") +\n  theme_bw() + \n  scale_fill_manual(values = \n                      met.brewer(\"Tam\", \n                                 n = 5,\n                                 type = \"continuous\"))\n\n\n\n\n\n\n\n\nOptions for MetBrewer: https://www.blakerobertmills.com/my-work/met-brewer#:~:text=%7BMetBrewer%7D%20is%20an%20R%20package%20that%20provides%20color,18%20colorblind-friendly.%20Full%20documentation%20can%20be%20found%20here.",
+    "crumbs": [
+      "Analysing Data",
+      "Plots"
+    ]
+  },
+  {
+    "objectID": "posts/diagnostic_info.html",
+    "href": "posts/diagnostic_info.html",
+    "title": "Diagnostic plots and outliers",
+    "section": "",
+    "text": "library(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.4     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n#read in the data\nstar &lt;- readr::read_csv(\"https://drmankin.github.io/disc_stats/star.csv\")\n\nRows: 2161 Columns: 48\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr (28): gender, ethnicity, birth, stark, star1, star2, star3, lunchk, lunc...\ndbl (20): readk, read1, read2, read3, mathk, math1, math2, math3, experience...\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\nread_full_lm &lt;- lm(read1 ~ readk + mathk,\n                   data = star)",
+    "crumbs": [
+      "Analysing Data",
+      "Diagnostic Plots and Outliers"
+    ]
+  },
+  {
+    "objectID": "posts/diagnostic_info.html#diagnostic-plots",
+    "href": "posts/diagnostic_info.html#diagnostic-plots",
+    "title": "Diagnostic plots and outliers",
+    "section": "Diagnostic plots",
+    "text": "Diagnostic plots\n\nplot(read_full_lm, which = 1:6)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPretty residual plots\n\nlibrary(\"ggfortify\")\nggplot2::autoplot(read_full_lm, \n                  which = 1:4,\n                  colour = \"darkcyan\", \n                  smooth.colour = \"purple\", \n                  alpha = .3, \n                  size = .5) +\n  theme_bw()",
+    "crumbs": [
+      "Analysing Data",
+      "Diagnostic Plots and Outliers"
+    ]
+  },
+  {
+    "objectID": "posts/diagnostic_info.html#influential-cases-and-outliers",
+    "href": "posts/diagnostic_info.html#influential-cases-and-outliers",
+    "title": "Diagnostic plots and outliers",
+    "section": "Influential cases and outliers",
+    "text": "Influential cases and outliers\n\n#augment gets the residuals\n#rowid_to_column gets the case number and creates a column (we've decided to call it case_no)\n#so we get a tibble of diagnostic stats and the case number for each\n\nread_full_res &lt;- read_full_lm |&gt; \n  broom::augment() |&gt; \n  tibble::rowid_to_column(var = \"case_no\") \n\n\n#we then use this tibble\n#filter to get the rows with absolute value of standard residual &gt;= 1.96 (95% of data)\n#selected the columns we are interested in: case number, standard residual, and residual\n#arranged it by standard residual - smallest first \nread_full_res |&gt; \n  dplyr::filter(abs(.std.resid) &gt;= 1.96) |&gt;\n  dplyr::select(case_no, .std.resid, .resid) |&gt; \n  dplyr::arrange(.std.resid)\n\n# A tibble: 121 × 3\n   case_no .std.resid .resid\n     &lt;int&gt;      &lt;dbl&gt;  &lt;dbl&gt;\n 1    1189      -3.47  -149.\n 2      31      -3.27  -140.\n 3    1071      -3.01  -129.\n 4     158      -2.92  -125.\n 5     837      -2.92  -125.\n 6    1995      -2.89  -124.\n 7    2050      -2.86  -123.\n 8    1820      -2.83  -121.\n 9    1663      -2.82  -121.\n10     627      -2.72  -116.\n# ℹ 111 more rows\n\nread_full_res |&gt; \n  dplyr::filter(abs(.std.resid) &gt;= 2.5) |&gt;\n  dplyr::select(case_no, .std.resid, .resid) |&gt; \n  dplyr::arrange(.std.resid)\n\n# A tibble: 39 × 3\n   case_no .std.resid .resid\n     &lt;int&gt;      &lt;dbl&gt;  &lt;dbl&gt;\n 1    1189      -3.47  -149.\n 2      31      -3.27  -140.\n 3    1071      -3.01  -129.\n 4     158      -2.92  -125.\n 5     837      -2.92  -125.\n 6    1995      -2.89  -124.\n 7    2050      -2.86  -123.\n 8    1820      -2.83  -121.\n 9    1663      -2.82  -121.\n10     627      -2.72  -116.\n# ℹ 29 more rows\n\nread_full_res |&gt; \n  dplyr::filter(abs(.std.resid) &gt;= 3) |&gt;\n  dplyr::select(case_no, .std.resid, .resid) |&gt; \n  dplyr::arrange(.std.resid)\n\n# A tibble: 8 × 3\n  case_no .std.resid .resid\n    &lt;int&gt;      &lt;dbl&gt;  &lt;dbl&gt;\n1    1189      -3.47  -149.\n2      31      -3.27  -140.\n3    1071      -3.01  -129.\n4    1678       3.07   132.\n5    1157       3.07   132.\n6    1347       3.10   133.\n7    1475       3.27   140.\n8     383       3.36   144.\n\n#using tibble of diagnostic info\n#arranging tibble by descending cooks value \n#selecting only case number and cooks value\n#to see if any are bigger than 1 \nread_full_res |&gt; \n  dplyr::arrange(desc(.cooksd)) |&gt;\n  dplyr::select(case_no, .cooksd)\n\n# A tibble: 2,161 × 2\n   case_no .cooksd\n     &lt;int&gt;   &lt;dbl&gt;\n 1      31 0.0190 \n 2      79 0.0149 \n 3    2095 0.0132 \n 4    1820 0.0129 \n 5     952 0.0113 \n 6    1475 0.00940\n 7     383 0.00938\n 8    1071 0.00929\n 9    1189 0.00827\n10    1795 0.00782\n# ℹ 2,151 more rows",
+    "crumbs": [
+      "Analysing Data",
+      "Diagnostic Plots and Outliers"
+    ]
+  },
+  {
+    "objectID": "posts/lm.html",
+    "href": "posts/lm.html",
+    "title": "Linear model",
+    "section": "",
+    "text": "library(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.4     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\n#read in the data\ndata &lt;- readr::read_csv(here::here('data/barbenheimr.csv'))\n\nRows: 1000 Columns: 15\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr  (4): ppt_id, sex, employment_status, birth_country\ndbl (11): age, annual_income, iq, ig_followers, twitter_followers, history_c...\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\n#view the codebook\ncodebook &lt;- readr::read_csv(here::here('data/codebook.csv'), show_col_types = F)",
+    "crumbs": [
+      "Analysing Data",
+      "Linear Model"
+    ]
+  },
+  {
+    "objectID": "posts/lm.html#creating-a-linear-model",
+    "href": "posts/lm.html#creating-a-linear-model",
+    "title": "Linear model",
+    "section": "Creating a linear model",
+    "text": "Creating a linear model\n\nbarbie_lm &lt;- lm(barbie_rating ~ mental_age,\n                data = data)\nbarbie_lm\n\n\nCall:\nlm(formula = barbie_rating ~ mental_age, data = data)\n\nCoefficients:\n(Intercept)   mental_age  \n   3.132330    -0.001528  \n\n\n\nTo get overall model fit\n\nbroom::glance(barbie_lm) |&gt; \n  knitr::kable(digits = 3)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nr.squared\nadj.r.squared\nsigma\nstatistic\np.value\ndf\nlogLik\nAIC\nBIC\ndeviance\ndf.residual\nnobs\n\n\n\n\n0.001\n0\n1.205\n0.678\n0.411\n1\n-1604.447\n3214.894\n3229.617\n1449.207\n998\n1000\n\n\n\n\n\n\n\nTo get model parameters\n\nbroom::tidy(barbie_lm) |&gt; \n  knitr::kable(digits = 3)\n\n\n\n\nterm\nestimate\nstd.error\nstatistic\np.value\n\n\n\n\n(Intercept)\n3.132\n0.104\n30.225\n0.000\n\n\nmental_age\n-0.002\n0.002\n-0.823\n0.411",
+    "crumbs": [
+      "Analysing Data",
+      "Linear Model"
+    ]
+  },
+  {
+    "objectID": "posts/lm.html#comparing-models-using-anova",
+    "href": "posts/lm.html#comparing-models-using-anova",
+    "title": "Linear model",
+    "section": "Comparing models using anova",
+    "text": "Comparing models using anova\n\nbarbie_lm_full &lt;- lm(barbie_rating ~ mental_age + sex, \n                     data = data)\n\nanova(barbie_lm, barbie_lm_full) |&gt; \n  broom::tidy()\n\n# A tibble: 2 × 7\n  term                          df.residual   rss    df  sumsq statistic p.value\n  &lt;chr&gt;                               &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;\n1 barbie_rating ~ mental_age            998 1449.    NA NA        NA      NA    \n2 barbie_rating ~ mental_age +…         997 1449.     1  0.414     0.285   0.594",
+    "crumbs": [
+      "Analysing Data",
+      "Linear Model"
+    ]
+  },
+  {
+    "objectID": "posts/lm.html#standardized-bs",
+    "href": "posts/lm.html#standardized-bs",
+    "title": "Linear model",
+    "section": "Standardized bs",
+    "text": "Standardized bs\nstandardized parameters tell us how many standard deviations the outcome changes by, when a predictor changes by one standard deviation\n\nparameters::model_parameters(barbie_lm_full, standardize = \"refit\") |&gt; \n  knitr::kable(digits = 3)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nParameter\nCoefficient\nSE\nCI\nCI_low\nCI_high\nt\ndf_error\np\n\n\n\n\n(Intercept)\n-0.017\n0.045\n0.95\n-0.106\n0.071\n-0.381\n997\n0.703\n\n\nmental_age\n-0.026\n0.032\n0.95\n-0.088\n0.036\n-0.830\n997\n0.407\n\n\nsexmale\n0.034\n0.063\n0.95\n-0.090\n0.158\n0.534\n997\n0.594",
+    "crumbs": [
+      "Analysing Data",
+      "Linear Model"
+    ]
+  },
+  {
+    "objectID": "posts/lm.html#robust-parameter-estimates",
+    "href": "posts/lm.html#robust-parameter-estimates",
+    "title": "Linear model",
+    "section": "Robust parameter estimates",
+    "text": "Robust parameter estimates\n\n#to get robust parameter estimates: \nlm_rob &lt;- robust::lmRob(barbie_rating ~ mental_age + sex,\n                               data = data)\nsummary(lm_rob)  \n\n\nCall:\nrobust::lmRob(formula = barbie_rating ~ mental_age + sex, data = data)\n\nResiduals:\n     Min       1Q   Median       3Q      Max \n-2.12366 -1.04378 -0.04786  0.94477  2.02332 \n\nCoefficients:\n             Estimate Std. Error t value Pr(&gt;|t|)    \n(Intercept)  3.112226   0.110610  28.137   &lt;2e-16 ***\nmental_age  -0.001540   0.001862  -0.827    0.408    \nsexmale      0.040699   0.076475   0.532    0.595    \n---\nSignif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1\n\nResidual standard error: 1.313 on 997 degrees of freedom\nMultiple R-Squared: 0.0009639 \n\nTest for Bias:\n            statistic p-value\nM-estimate      7.601 0.05502\nLS-estimate   -98.812 1.00000\n\n#to get robust CIs and p-values \nparameters::model_parameters(lm_rob, vcov = \"HC4\") |&gt;    \n  knitr::kable(digits = 3)  \n\nWarning: The `vcov` argument of the `insight::get_varcov()` function is not yet\n  supported for models of class `lmRob`.\nWarning: The `vcov` argument of the `insight::get_varcov()` function is not yet\n  supported for models of class `lmRob`.\nWarning: The `vcov` argument of the `insight::get_varcov()` function is not yet\n  supported for models of class `lmRob`.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nParameter\nCoefficient\nSE\nCI\nCI_low\nCI_high\nt\ndf_error\np\n\n\n\n\n(Intercept)\n3.112\n0.111\n0.95\n2.895\n3.329\n28.137\n997\n0.000\n\n\nmental_age\n-0.002\n0.002\n0.95\n-0.005\n0.002\n-0.827\n997\n0.408\n\n\nsexmale\n0.041\n0.076\n0.95\n-0.109\n0.191\n0.532\n997\n0.595\n\n\n\n\n#bootstrap method - for small samples \nparameters::model_parameters(lm_rob, bootstrap = TRUE) |&gt;    \n  knitr::kable(digits = 3)\n\n\n\n\nParameter\nCoefficient\nCI\nCI_low\nCI_high\np\n\n\n\n\n(Intercept)\n3.143\n0.95\n3.143\n3.143\n0\n\n\nmental_age\n-0.003\n0.95\n-0.003\n-0.003\n0\n\n\nsexmale\n-0.023\n0.95\n-0.023\n-0.023\n0",
+    "crumbs": [
+      "Analysing Data",
+      "Linear Model"
+    ]
+  },
+  {
+    "objectID": "posts/lm.html#omnibus-tests-of-categorical-predictors",
+    "href": "posts/lm.html#omnibus-tests-of-categorical-predictors",
+    "title": "Linear model",
+    "section": "Omnibus tests of categorical predictors",
+    "text": "Omnibus tests of categorical predictors\n\nlm_omnibus &lt;- lm(barbie_rating ~ employment_status, data = data)\n\nanova(lm_omnibus) |&gt; \n  parameters::model_parameters(effectsize = \"omega\") |&gt; \n  knitr::kable(digits = 3)\n\n\n\n\nParameter\nSum_Squares\ndf\nMean_Square\nF\np\n\n\n\n\nemployment_status\n3.182\n4\n0.796\n0.547\n0.701\n\n\nResiduals\n1447.009\n995\n1.454\nNA\nNA\n\n\n\n\nbroom::tidy(lm_omnibus, conf.int = TRUE) |&gt;\n  knitr::kable(digits = 3)\n\n\n\n\n\n\n\n\n\n\n\n\n\nterm\nestimate\nstd.error\nstatistic\np.value\nconf.low\nconf.high\n\n\n\n\n(Intercept)\n3.104\n0.108\n28.777\n0.000\n2.892\n3.316\n\n\nemployment_statuspart_time\n-0.074\n0.134\n-0.552\n0.581\n-0.336\n0.189\n\n\nemployment_statusself_employed\n-0.051\n0.133\n-0.384\n0.701\n-0.311\n0.209\n\n\nemployment_statusstudent\n-0.111\n0.131\n-0.853\n0.394\n-0.368\n0.145\n\n\nemployment_statusunemployed\n0.065\n0.151\n0.432\n0.666\n-0.231\n0.362",
+    "crumbs": [
+      "Analysing Data",
+      "Linear Model"
+    ]
+  },
+  {
+    "objectID": "posts/blog.html#header-2",
+    "href": "posts/blog.html#header-2",
+    "title": "Creating a blog",
+    "section": "header 2",
+    "text": "header 2\n\nheader 3\n\nheader 4\n\nheader 5\ncode",
+    "crumbs": [
+      "Creating a blog"
+    ]
+  }
+]

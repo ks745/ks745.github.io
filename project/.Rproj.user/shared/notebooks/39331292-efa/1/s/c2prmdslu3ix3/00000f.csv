@@ -1,0 +1,7 @@
+"0","#to make it look nicer: "
+"0","options(knitr.kable.NA = """")"
+"0",""
+"0","parameters::model_parameters(raq_fa,"
+"0","                             sort = TRUE, "
+"0","                             threshold = ""max"") |> "
+"0","  knitr::kable(digits = 2)"

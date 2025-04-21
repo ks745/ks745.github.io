@@ -1,0 +1,16 @@
+---
+title: "Publishing"
+format: 
+  html: 
+    highlight-style: dracula
+---
+
+To make the blog or website into an actual website, use quarto publish (you will need to create an account)
+
+-   In the terminal, type `quarto publish quarto-pub`
+
+-   It will then ask you to authorise your account, and pick a site name
+
+-   The URL will be https://your_account_name.quarto.pub/site_name
+
+-   example: https://ks745.quarto.pub/r-guide

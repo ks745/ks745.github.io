@@ -1,0 +1,16 @@
+Variable Name,Description
+ppt_id,Random unique alphanumeric code assigned to each participant
+sex,"Participant's sex (male, female)"
+age,Age in years
+employment_status,"Employment status (full time, part time, self employed, student, unemployed)"
+annual_income,Annual income measured in GBP
+birth_country,Country of birth
+iq,Intelligence Quotient (IQ)
+ig_followers,Number of Instagram followers at the time of participation
+twitter_followers,Number of twitter followers at the time of participation
+history_curiosity,"Likert scale of curiosity into historical events on a scale from 1-7, a higher score indicates greater historical curiosity "
+mental_age,Assessment of 'mental age' in years
+gender_stereotype_beliefs,"Likert scale of endorsement of gender stereotypes on a scale from 1-5, a higher score indicates endorsement of more 'traditional' stereotypes "
+fashionista_score,"Likert scale of fashion sense on a scale from 1-10, a higher score indicates greater fashionability"
+barbie_rating,"Likert scale of film enjoyment (from 1-5), a higher score indicates greater enjoyment of Barbie"
+oppenheimer_rating,"Likert scale of film enjoyment (from 1-5), a higher score indicates greater enjoyment of Oppenheimer"

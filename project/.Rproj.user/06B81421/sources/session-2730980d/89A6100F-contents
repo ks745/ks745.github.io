@@ -1,0 +1,80 @@
+---
+title: "Creating a website"
+format: 
+  html: 
+    highlight-style: dracula
+---
+
+## Create a new Rstudio project
+
+1.  In the terminal, type `quarto create project`
+2.  Select wesbite by using the down arrows and enter
+3.  Set directory as `.` (to create the website in the 'project' folder rather than a subfolder inside that)
+4.  choose a title
+5.  once your documents have been created, reload posit cloud to get the 'build' button
+
+## Editing the \_quarto.yml
+
+Example:
+
+``` r
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "R Guide"
+  navbar:
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Analysing Data"
+        href: posts/analysing_data.qmd
+      - text: "Creating a blog"
+        href: posts/blog.qmd
+      - text: "Blogs"
+        menu: 
+          - href: https://ks745.quarto.pub/r-guide/posts/blog.html
+            text: "R blog"
+          - href: https://ks745.quarto.pub/qqm/
+            text: "QQM"
+          - href: https://ks745.quarto.pub/discovering-statistics/
+            text: "Discovering Statistics"
+
+    tools:
+      - icon: cloudy-fill
+        href: https://posit.cloud/content/yours?sort=name_asc
+
+  sidebar:
+    - title: "Analysing Data"
+      style: "docked"
+      contents:
+        - text: "Analysing Data"
+          href: posts/analysing_data.qmd
+        - section: "Visualising Data"
+          href: posts/summary_tables.qmd
+          contents:
+            - posts/summary_tables.qmd
+            - posts/plots.qmd
+            - posts/diagnostic_info.qmd
+        - text: "Linear Model"
+          href: posts/lm.qmd
+        - text: "Contrast Coding"
+          href: posts/contrast_coding.qmd
+        - text: "Exploratory Factor Analysis"
+          href: posts/efa.qmd
+    
+    - title: "Creating a blog"
+      contents: 
+        - posts/blog.qmd
+        - posts/website.qmd
+format:
+  html:
+    theme:
+       light: minty
+       dark: solar
+    css: styles.css
+    toc: true
+```
+
+This website: <https://quarto.org/docs/websites/website-navigation.html#side-navigation> has lots of ways to customise the \_quarto.yml doc to get the website to look how you want

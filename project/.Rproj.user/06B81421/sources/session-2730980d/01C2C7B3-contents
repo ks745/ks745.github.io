@@ -1,0 +1,202 @@
+---
+title: "Exploratory Factor Analysis"
+format: 
+  html: 
+    highlight-style: dracula
+---
+
+```{r}
+library(tidyverse)
+library(GPArotation)
+raq_tib <- here::here("data/raq.csv") |>
+  readr::read_csv()
+
+#creating object with only raq items (without id number)
+raq_items_tib <- raq_tib |> 
+  dplyr::select(-id)
+raq_items_tib
+```
+
+## Correlations
+
+### Correlations using Pearson's R
+
+```{r}
+correlation::correlation(raq_items_tib) |> 
+  summary() |> 
+  knitr::kable(digits = 2)
+```
+
+### Correlations using Spearman's Rho
+
+Recommended
+
+```{r}
+raq_poly <- psych::polychoric(raq_items_tib)
+raq_cor <- raq_poly$rho
+raq_cor |> 
+  knitr::kable(digits = 2)
+```
+
+### Creating a correlation heat map using cor.plot()
+
+```{r}
+psych::cor.plot(raq_cor, upper = FALSE, cex = .4)
+```
+
+## Bartlett's test of sphericity
+
+```{r}
+psych::cortest.bartlett(raq_cor, n = 2571)
+```
+
+## KMO measure of sampling adequacy
+
+```{r}
+psych::KMO(raq_cor)
+```
+
+## Parallel analysis
+
+-   n.obs = sample size
+
+-   fm = "minres" is default - uses minimum residuals
+
+-   fa = "both" is default - shows both factors and components. can change to fa = "fa" to just show number of factors to extract
+
+-   cor = "cor" is default - uses pearson's correlations. can change to cor = "poly" for polychoric correlations
+
+```{r}
+#using the raw data
+#psych::fa.parallel(raq_items_tib, fa = "fa", cor = "poly")
+
+#using the correlation matrix we made earlier (faster)
+psych::fa.parallel(raq_cor, n.obs = 2571, fa = "fa")
+```
+
+### Using eigenvalues
+
+Compares our data to a data set with no underlying factors (keep the factors with eigenvalues bigger than red line)
+
+```{r}
+# parallel analysis but with principle components to compute the eigenvalues 
+
+# Using the raw data
+#psych::fa.parallel(raq_items_tib, fa = "pc", cor = "poly")
+
+# Using the correlation matrix (faster)
+psych::fa.parallel(raq_cor, n.obs = 2571, fa = "pc")
+```
+
+## Creating the factor analysis object (and inspecting it)
+
+General format
+
+``` r
+my_fa_object <- psych::fa(data_tib, 
+nfactors = 1, 
+fm = "minres", 
+rotate = "oblimin", 
+scores = "regression", 
+max.iter = 50, 
+use = "pairwise", 
+cor = "cor"                            
+)
+```
+
+-   nfactors = how many factors to extract
+
+-   rotate = “oblimin”: the method of factor rotation. the default is an oblique rotation method called oblimin
+
+scores = “regression” is default method for computing factor scores - use scores = "tenBerge" for oblique rotation
+
+```{r}
+library(GPArotation)
+
+# using the raw rata 
+# raq_fa <- psych::fa(raq_items_tib,
+#                    nfactors = 4,
+#                    scores = "tenBerge",
+#                    cor = "poly"
+#                    )
+
+# using the correlation matrix 
+raq_fa <- psych::fa(raq_cor, 
+                    n.obs = 2571, 
+                    nfactors = 4,
+                    scores = "tenBerge"
+                    )
+raq_fa
+```
+
+## Factor loadings
+
+-   threshold = "max" is default - shows only primary factor loadings, or can change to be threshold = "0.2" (for example), or can change to see all factor loadings threshold = NULL
+
+```{r}
+#to make it look nicer: 
+options(knitr.kable.NA = "")
+
+parameters::model_parameters(raq_fa,
+                             sort = TRUE, 
+                             threshold = "max") |> 
+  knitr::kable(digits = 2)
+```
+
+## Reliability analysis
+
+### Using omega()
+
+if all items are stored in the same direction:
+
+``` r
+my_omg <- psych::omega(my_tibble,
+nfactors = 1,
+fm = "minres",
+key = c(1, 1, -1, 1, 1 … 1),
+rotate = "oblimin",
+poly = FALSE   
+)
+```
+
+-   because we use polychoric correlations we need to include poly = TRUE
+
+-   key argument allows us to reverse item scoring - to be quicker, use rep(), which takes the form rep(thing_to_repeat, repetitions)
+
+```{r}
+# need to have loaded library(GPArotation)
+raq_omg <- psych::omega(raq_items_tib,
+                        nfactors = 4,
+                        fm = "minres",
+                        key = c(1, 1, -1, rep(1, 20)),
+                        poly = TRUE
+                        )
+raq_omg
+```
+
+The column g shows the loading of each item on the general factor
+
+Columns F1 to F4 show factor loadings for each item (don’t match main factor analysis because this model includes general factor)
+
+### Cronbach's alpha
+
+Not recommended
+
+Pipe the variables for each subscale into the alpha() function from psych
+
+```{r}
+# eg for fear of computers subsclale 
+raq_tib |> 
+  dplyr::select(raq_05, raq_06, raq_07, raq_10, raq_13, raq_14, raq_15, raq_18) |> 
+  psych::alpha()
+
+# fear of peer / social evaluation subscale
+raq_tib |> 
+  dplyr::select(raq_02, raq_09, raq_19, raq_22, raq_23) |> 
+  psych::alpha()
+
+# for fear of statistics - raq_03 is reverse coded
+raq_tib |> 
+  dplyr::select(raq_01, raq_03, raq_04, raq_05, raq_12, raq_16, raq_20, raq_21) |> 
+  psych::alpha(keys = c(1, -1, rep(1, 6)))
+```
