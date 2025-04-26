@@ -1,6 +1,0 @@
----
-title: "Contrast Coding"
-format: 
-  html: 
-    highlight-style: dracula
----

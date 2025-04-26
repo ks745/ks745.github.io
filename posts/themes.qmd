@@ -1,8 +1,0 @@
----
-title: "Themes and Icons"
-format: 
-  html: 
-    highlight-style: dracula
----
-
-[here](https://icons.getbootstrap.com/)

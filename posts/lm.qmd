@@ -1,6 +1,0 @@
----
-title: "Linear model"
-format: 
-  html: 
-    highlight-style: dracula
----

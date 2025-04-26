@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css?family=Tagesschrift');
+
+body {
+	background-color: #12412f;
+	margin-left: 1.5%;
+	margin-right: 1.5%;
+}
+
+h1 {
+	color: white;
+	text-align: center;
+	font-family: Garamond, "Times New Roman";
+	font-variant: small-caps;
+}
+
+h2 {
+	color: white;
+}
+
+.plant {
+	background-image: url("https://media.wired.com/photos/5d8aab8bef84070009028d31/master/pass/Plant-Music-1162975190.jpg");
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	color: white;
+	text-align: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  color: #12412f;
+  grid-gap: 0.5%;
+  align: center;
+}
+
+.grid-boxes {
+	background-color:black; 
+	padding-left: 2%;
+}
+
+p.round {
+	border: 2px solid white;
+	border-radius: 8px;
+	color: white;
+	width: 30%;
+	text-align: center;
+}
+
+a.one:link, a.one:visited {
+	background-color: black;
+	color: #12412f;
+	padding: 10px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+}
+
+a.one:hover, a.one:active {
+	color: white
+}
+
+ul.nav {
+	list-style-type: none;
+	margin: 0;
+	margin-left: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: black;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+li.nav {
+	float: left;
+	border-right: 1px solid #12412f
+}
+
+li.nav a {
+	display: block;
+	color: #12412f;
+	text-align: center;
+	text-decoration: none;
+	padding: 8px;
+}
+
+li.nav a:hover:not(.active) {
+	color: white;
+} 
+
+li.nav .active {
+	color: white;
+}
+
+li.nav:last-child {
+  border-right: none;
+}
+
+header {
+	margin: 0;
+	margin-left: 0;
+}
