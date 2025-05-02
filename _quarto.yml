@@ -1,0 +1,19 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Kaz Sweetnam"
+  navbar:
+    left:
+      - text: "Home"
+        href: index.html
+    tools:
+      - icon: cloudy-fill
+        href: https://posit.cloud/content/yours?sort=name_asc
+
+format:
+  html:
+    theme: custom.scss
+    css: styles.css
+    toc: true
