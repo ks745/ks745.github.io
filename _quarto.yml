@@ -8,6 +8,8 @@ website:
     left:
       - text: "Home"
         href: index.html
+      - text: "Placememt"
+        href: placement.html
     tools:
       - icon: cloudy-fill
         href: https://posit.cloud/content/yours?sort=name_asc
