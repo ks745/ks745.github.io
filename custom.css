@@ -38,15 +38,15 @@ nav a {
 	padding: 8px;
 	border-right: 1px solid #12412f;
 	display: block;
+	font-weight: bold;
 }
 
 nav a:last-child {
 	border-right: none;
 }
 
-nav a:hover:not(.active), 
-nav .active {
-	color: white;
+nav a:hover:not(.active), nav .active {
+	color: #4b5d80;
 	text-decoration: none;
 }
 
