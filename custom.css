@@ -1,77 +1,54 @@
-@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Roboto');
+@import url('https://fonts.googleapis.com/css?family=Oswald|Inconsolata');
 
-body {
-	font-family: Roboto, Garamond, "Times New Roman";
-	background-color: #004643;
-	font-size: 14px;
-	margin-left: 5%;
-	margin-right: 5%;
+
+html {
+  overflow-x: hidden;
+  margin-right: calc(-1 * (100vw - 100%));
 }
 
-h1 {
-	text-align: center;
-	font-family: "Playfair Display", Garamond, "Times New Roman";
-	font-weight: normal;
-	font-size: 50px;
-	color: white;
-}
-
-h2 {
-	text-align: center;
-	font-family: "Playfair Display", Garamond, "Times New Roman";
-	font-weight: normal;
-	font-size: 25px;
+*{
+	margin:	0% 0% 0% 0%;
+	padding: 0;
 }
 
 nav {
-	position: fixed;
-	top: 0;
-	left: 0; /* explicitly align it to the left edge */
+	font-family: Oswald;
+	background-color: #005842;
+	text-transform: uppercase;
 	width: 100%;
-	background-color: #abd1c6;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 5px 0;
-	box-sizing: border-box; /* ensures padding doesn't affect width */
+	text-align: center;
+	padding: 8px;
 }
 
 nav a {
-	color: black;
+	padding: 0px 5%;
 	text-decoration: none;
-	padding: 8px;
-	border-right: 1px solid #12412f;
-	display: block;
-	font-weight: bold;
+	color: #ffffff;
 }
 
-nav a:last-child {
-	border-right: none;
+nav a:hover {
+  color: #cddec8;
 }
-
-nav a:hover:not(.active), nav .active {
-	color: #4b5d80;
-	text-decoration: none;
-}
-
-
-
-
 
 /* Project grid */
 .grid-container {
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: repeat(5, 1fr);
 	grid-auto-rows: 1fr;
-	gap: 5px;
-	padding: 10px;
+	gap: 10px;
+	padding: 20px;
 	align: center;
 	text-align: center;
 	overflow: auto;
+	max-width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #005842;
 }
 
 .grid-boxes {
 	text-align: center;
+	padding: 0;
 }
 
 .modal {
@@ -87,11 +64,12 @@ nav a:hover:not(.active), nav .active {
 }
 
 .modal-content {
-	background-color: #abd1c6;
+	background-color: #cddec8;
 	margin: 10% auto;
 	padding: 20px;
 	border: 1px solid #888;
 	width: 80%;
+	font-family: Inconsolata;
 }
 
 .close {
@@ -107,27 +85,17 @@ nav a:hover:not(.active), nav .active {
   cursor: pointer;
 }
 
+
 .block {
-	display: block;
-	width: 100%;
-	height: 100%;
-	border: none;
-	background-color: #004643;
-	color: white;
-	font-size: 14px;
-	cursor: pointer;
-	text-align: center;
-	padding: 10px;
-	font-family: Roboto;	
+	opacity: 1;
 }
 
 .block:hover {
-  background-color: #85a16b;
-  color: black;
+	opacity: 0.7;
 }
 
 
-/* Links */
+
 .lit-link:link, .lit-link:visited {
   color: black;
   text-decoration: none;
@@ -138,10 +106,28 @@ nav a:hover:not(.active), nav .active {
   text-decoration: underline;
 }
 
+.grid2 {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	gap: 10px;
+	width: 100%;
+}
 
-/* Padlet links*/ 
+.grid2-box {
+	width: 100%;      /* Fill the grid cell */
+	height: auto;     /* Maintain aspect ratio */
+	display: block;   /* Remove inline spacing */
+}
+
+.grid3 {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 10px;
+	width: 100%;
+}
+
 a.padlet:link, a.padlet:visited {
-	background-color: teal;
+	background-color: #005842;
 	color: white;
 	padding: 10px;
 	text-align: center;
@@ -153,53 +139,47 @@ a.padlet:hover, a.padlet:active {
 	color: black;
 }
 
+ul {
+	padding-left: 30px;
+}
 
-.center {
-	display: block;
+.about {
+	padding: 20px;
+	align: center;
+	overflow: auto;
+	max-width: 1000px;
 	margin-left: auto;
 	margin-right: auto;
+	background-color: #005842;
+	color: white;
+	font-family: Inconsolata;
 }
 
-.grid2 {
+.subtitle {
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.5em;
+	padding-bottom: 5px;
+}
+
+.pathway-grid {
 	display: grid;
-	grid-template-columns: repeat(5, 1fr);
+	grid-template-columns: repeat(4, 1fr);
 	gap: 10px;
 	width: 100%;
+	text-align: center;
+	padding-top: 5px;
 }
 
-.grid2-box {
-	width: 100%;      /* Fill the grid cell */
-	height: auto;     /* Maintain aspect ratio */
-	display: block;   /* Remove inline spacing */
+.pathway-box {
+	background-color: #cddec8;
+	color: black;
+	padding: 5px;
 }
 
-
-.textbox {
-	padding: 0px 5% 5px 5%;
-	color: white;
-}
-
-
-footer {
-	position: static;
-	bottom: 0;
-	left: 0; 
-	width: 100%;
-	font-size:10px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 5px 0;
-	box-sizing: border-box;
-	border-top: 1px solid #abd1c6;
-}
-
-	
-footer a {
-	color: white;
-	text-decoration: none;
-}
-
-footer a:hover {
-	text-decoration:underline;
+.pathway-title {
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: bold;
 }
